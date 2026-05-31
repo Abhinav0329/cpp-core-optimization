@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-int getlength(const char *str){//const is a safety shield. It tells the compiler: "This function is allowed to read the characters, but it is strictly forbidden from modifying or erasing them."
+int getlength(const char *str){//A contract that states I promise I am only using this pointer to read data. If I accidentally write code that tries to change the text, break the build immediately."
     if(*str=='\0'){
         return 0;
     }
@@ -10,6 +10,8 @@ int getlength(const char *str){//const is a safety shield. It tells the compiler
         return 1+ getlength(str+1);//This does not alter the text in memory. It simply calculates a new memory address that is exactly 1 byte forward (the next character in line).
     }
 }
+/*In C++, arrays are never passed by value to functions - computer never makes a duplicate copy of your array when you pass it into a function.
+Instead, it passes the original array by sending a pointer to its very first element.*/
 
 // logic :-
 /*
@@ -26,8 +28,9 @@ Total=1+(1+(1+(1+(1+(1+(1+0))))))=7
 */
 
 int main(){//Fast I/O optimization for execution speed
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    ios_base::sync_with_stdio(false);//it breaks the synchronization between C and C++ standard, allowing for faster input and output operations. 
+    //This is particularly beneficial when dealing with large volumes of data, as it reduces traffic between the C and C++ standard libraries, resulting in improved performance.
+    cin.tie(NULL);//Unties cin from cout, allowing them to operate independently.This means Stoping cout from pausing to print text every time cin asks for input, making code run faster
     
     char str[100];
     cout<<"Enter the text : ";
