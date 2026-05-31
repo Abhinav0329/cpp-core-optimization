@@ -1,0 +1,13 @@
+# Mac system files
+.DS_Store
+
+# VS Code directory
+.vscode/
+
+# Compiled C++ binaries (Executables)
+*.out
+*.exe
+1
+2
+3
+build/
