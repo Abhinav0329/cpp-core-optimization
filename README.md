@@ -4,7 +4,7 @@ My collection of C++ solutions built to run as fast as possible. I focus on smar
 
 ## 📂 Repository Structure & Challenges Map
 
-This repository is organized cleanly by logic types. Below are the challenges solved so far:
+This repository is organized cleanly by logical categories. Below is the layout of the challenges solved so far:
 
 ### 1. 📂 functions / recursion+state_variables
 Deep dive into structural recursion patterns, tracking values across memory call stacks using parameters and state tracking:
@@ -17,11 +17,12 @@ Deep dive into structural recursion patterns, tracking values across memory call
 ### 2. 📂 functions / recursive_strings
 *   **`length.cpp`:** Tracking string sizing and indexing boundaries utilizing raw pointer drift tracking (`str + 1`).
 
-### 3. Structural Number Logic (Root / Sub-files)
-Optimized algorithmic checks for advanced number theory properties:
+### 3. 📂 functions / number_theory_logic
+Optimized algorithmic logic and checks for advanced number theory properties and positional numeric properties:
 *   **`prime_no.cpp` & `checkfactor.cpp`:** Fast factor searching and primality testing.
 *   **`goldbach_pair.cpp`:** Finding prime combinations based on Goldbach's conjecture.
 *   **`duck_number.cpp` & `special_number.cpp`:** Positional digit logic parsing.
+*   **`1.cpp`, `2.cpp`, `3.cpp`, `concept.cpp`:** Structural logical logic challenges.
 
 ---
 
