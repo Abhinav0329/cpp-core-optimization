@@ -24,13 +24,15 @@
 #include<cmath>//needed for abs() function
 
 using namespace std;
-int sumdigits(int n){
-    if(n==0){
-        return 0;
-    }
-    else{
-        return (n%10)+sumdigits(n/10);
-    }
+int sumdigits(int n,int running_sum=0){
+    /*
+    Tail Call Optimization (TCO) is a specialized compiler optimization technique that prevents recursive functions from consuming excessive amounts of system stack memory.
+    it converts into O(1) space complexity by reusing the same stack frame for each recursive call, 
+    rather than creating a new one. This is particularly beneficial for functions that involve deep recursion, 
+    as it prevents stack overflow errors and improves performance.
+    */
+    if(n==0) return running_sum;
+    return sumdigits(n/10,running_sum+(n%10));
 }
 int main(){
     ios_base::sync_with_stdio(false);
