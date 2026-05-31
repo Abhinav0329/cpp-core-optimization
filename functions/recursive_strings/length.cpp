@@ -1,3 +1,5 @@
+//Question :- Given a string, find the length of the string using recursion. Do not use any built-in functions to calculate the length of the string.
+
 //Array decay - the array "decays" (converts) into a raw pointer pointing strictly to its very first character (index 0).
 #include<iostream>
 using namespace std;
