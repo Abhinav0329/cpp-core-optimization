@@ -1,13 +1,16 @@
 # Mac system files
 .DS_Store
 
-# VS Code directory
+# VS Code files
 .vscode/
 
-# Compiled C++ binaries (Executables)
-*.out
-*.exe
-1
-2
-3
-build/
+# Block all compiled Mac debugging folders completely
+*.dSYM/
+
+# Block compiled executables/binaries without extensions
+# (This matches files like 'variable', 'basic', etc.)
+*
+!*/
+!*.cpp
+!*.md
+!.gitignore
