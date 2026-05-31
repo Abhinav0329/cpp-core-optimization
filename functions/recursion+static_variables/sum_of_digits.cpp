@@ -1,3 +1,4 @@
+//(1.)using iteration
 // #include<iostream>
 // using namespace std;
 // int Sum(int n){
@@ -18,8 +19,10 @@
 //     return 0;
 // }
 
-//using recursion
+//(2.)using recursion
 #include<iostream>
+#include<cmath>//needed for abs() function
+
 using namespace std;
 int sumdigits(int n){
     if(n==0){
@@ -30,10 +33,14 @@ int sumdigits(int n){
     }
 }
 int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
     int n;
     cout<<"Enter the number : ";
     cin>>n;
-    int sum = sumdigits(n);
+    int x = abs(n);
+    int sum = sumdigits(x);
     cout<<"The sum of digits are "<< sum <<'\n';
     return 0;
 }
