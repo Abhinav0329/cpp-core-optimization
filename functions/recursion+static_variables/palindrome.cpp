@@ -2,24 +2,30 @@
 #include<iostream>
 using namespace std;
 int isPalindrome(int original){
+    if(original<0 || (original%10==0 && original!=0)){
+        return 0;
+    }
     int n=original;
     int reversedigit=0;
     while(n>0){
-        int lastdigit=n%10;
-        reversedigit=(reversedigit * 10)+lastdigit;
-        n/=10;
+    reversedigit=(reversedigit * 10)+n%10;;
+    n/=10;
     }
     return original==reversedigit;
 }
 
 int FindNext(int n){
-    while(!isPalindrome(n)){
-        n++;
+    long long current = (long long)n + 1;
+    while(!isPalindrome(current)){
+        current++;
     }
-    return n;
+    return current;
 }
 
 int main(){
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(NULL);
+    
     int n;
     cout<<"Enter the number : ";
     cin>>n;
